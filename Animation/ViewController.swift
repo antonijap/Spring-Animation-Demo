@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginButton: DesignableButton!
     @IBOutlet weak var emailField: DesignableTextField!
     @IBOutlet weak var passwordField: DesignableTextField!
+    @IBOutlet weak var logoImage: DesignableImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,12 +39,31 @@ class ViewController: UIViewController {
         passwordField.animation = "slideUp"
         passwordField.duration = 2.0
         passwordField.animate()
+        
+        logoImage.animation = "slideUp"
+        logoImage.duration = 3.0
+        logoImage.animate()
     }
     
     func animate() {
         loginButton.animation = "pop"
         loginButton.animate()
     }
+    
+    func animateError() {
+        emailField.animation = "shake"
+        emailField.animate()
+        
+        passwordField.animation = "shake"
+        passwordField.animate()
+    }
 
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        if let email = emailField.text where email != "", let password = passwordField.text where password != "" {
+            print("Success")
+        } else {
+            animateError()
+        }
+    }
 }
 

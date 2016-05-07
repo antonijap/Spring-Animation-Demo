@@ -60,7 +60,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFA-gv-2er" customClass="DesignableButton" customModule="Spring">
                                 <rect key="frame" x="234" y="395" width="133" height="50"/>
-                                <color key="backgroundColor" red="0.84313725490000002" green="0.35686274509999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.38039215686274508" blue="0.19215686274509802" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="133" id="mAj-Pg-MeK"/>
                                     <constraint firstAttribute="height" constant="50" id="rHi-0P-mrD"/>
@@ -73,15 +73,26 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xV9-8N-4wC"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swift" translatesAutoresizingMaskIntoConstraints="NO" id="S7K-ro-g6k" customClass="DesignableImageView" customModule="Spring">
+                                <rect key="frame" x="221" y="57" width="158" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="dQT-52-Uh3"/>
+                                    <constraint firstAttribute="height" constant="158" id="mlW-wI-h2L"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fkg-ic-xOu" firstAttribute="top" secondItem="eWs-jt-fId" secondAttribute="bottom" constant="8" id="3kN-tk-rUa"/>
                             <constraint firstItem="aFA-gv-2er" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ZN-q6-ywJ"/>
+                            <constraint firstItem="S7K-ro-g6k" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="AOV-8Q-Bek"/>
                             <constraint firstItem="Fkg-ic-xOu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JpW-jH-wSf"/>
+                            <constraint firstItem="S7K-ro-g6k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PBE-IF-1F1"/>
                             <constraint firstItem="Fkg-ic-xOu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Q09-SG-Fo6"/>
                             <constraint firstItem="aFA-gv-2er" firstAttribute="top" secondItem="Fkg-ic-xOu" secondAttribute="bottom" constant="24" id="oMd-jn-bQP"/>
                             <constraint firstItem="eWs-jt-fId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="pit-wI-0fW"/>
@@ -92,6 +103,7 @@
                     <connections>
                         <outlet property="emailField" destination="eWs-jt-fId" id="yVf-vU-Ht0"/>
                         <outlet property="loginButton" destination="aFA-gv-2er" id="UPd-2j-QiR"/>
+                        <outlet property="logoImage" destination="S7K-ro-g6k" id="HI9-hN-YAb"/>
                         <outlet property="passwordField" destination="Fkg-ic-xOu" id="bif-lL-8oI"/>
                     </connections>
                 </viewController>
@@ -100,4 +112,7 @@
             <point key="canvasLocation" x="522" y="531"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Swift" width="1024" height="1024"/>
+    </resources>
 </document>
