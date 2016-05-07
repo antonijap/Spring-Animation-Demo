@@ -7,19 +7,33 @@
 //
 
 import UIKit
+import Spring
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var loginButton: DesignableButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        loginButton.addTarget(self, action: #selector(ViewController.animate), forControlEvents: .TouchDown)
+        loginButton.addTarget(self, action: #selector(ViewController.animate), forControlEvents: .TouchDragEnter)
+        loginButton.addTarget(self, action: #selector(ViewController.animate), forControlEvents: .TouchUpInside)
+        loginButton.addTarget(self, action: #selector(ViewController.animate), forControlEvents: .TouchDragExit)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        loginButton.animation = "fadeInLeft"
+        loginButton.duration = 2.0
+        loginButton.animate()
+    }
+    
+    func animate() {
+        loginButton.animation = "pop"
+        loginButton.animate()
+    }
 
 }
 
