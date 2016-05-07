@@ -27,13 +27,16 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        loginButton.animation = "squeezeRight"
+        loginButton.animation = "slideRight"
+        loginButton.duration = 2.0
         loginButton.animate()
         
-        emailField.animation = "squeezeRight"
+        emailField.animation = "slideDown"
+        emailField.duration = 2.0
         emailField.animate()
         
-        passwordField.animation = "squeezeRight"
+        passwordField.animation = "slideUp"
+        passwordField.duration = 2.0
         passwordField.animate()
     }
     
