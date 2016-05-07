@@ -52,9 +52,11 @@ class ViewController: UIViewController {
     
     func animateError() {
         emailField.animation = "shake"
+        emailField.delay = 1.0
         emailField.animate()
         
         passwordField.animation = "shake"
+        passwordField.delay = 1.0
         passwordField.animate()
     }
 
