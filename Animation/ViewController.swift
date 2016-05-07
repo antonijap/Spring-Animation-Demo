@@ -12,6 +12,8 @@ import Spring
 class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: DesignableButton!
+    @IBOutlet weak var emailField: DesignableTextField!
+    @IBOutlet weak var passwordField: DesignableTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +27,14 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        loginButton.animation = "fadeInLeft"
-        loginButton.duration = 2.0
+        loginButton.animation = "squeezeRight"
         loginButton.animate()
+        
+        emailField.animation = "squeezeRight"
+        emailField.animate()
+        
+        passwordField.animation = "squeezeRight"
+        passwordField.animate()
     }
     
     func animate() {
